@@ -1,0 +1,4 @@
+setup.py
+README.md
+/tests/
+seq/__init__.py

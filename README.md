@@ -1,5 +1,7 @@
 # Python functional sequence processing library
 [![Github issues](https://img.shields.io/github/issues/Degubi/Py-Seq?label=Issues&style=plastic&logo=github)](https://github.com/Degubi/Py-Seq/issues)
+[![Linecount](https://img.shields.io/tokei/lines/github/degubi/Py-Seq?label=Total%20Lines&logo=Github&style=plastic)](https://github.com/Degubi/Py-Seq/tree/master/src)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/degubi/py-seq/Run%20tests?label=Build&style=plastic&logo=github-actions)](https://github.com/Degubi/Py-Seq/actions)
 [![Dependencies](https://img.shields.io/badge/dependencies-none-green.svg?label=Dependencies&style=plastic)](https://github.com/Degubi/Py-Seq/blob/master/setup.py)
 
 - The api is very similar to java8 streams
@@ -10,7 +12,13 @@
 - Javascript: https://github.com/Degubi/Js-Seq
 
 # Installation
-## TODO
+## Using pip:
+
+```pip install git+https://github.com/Degubi/Py-Seq.git```
+<br>
+
+## Without pip:
+```seq.py is available in the seq directory```
 
 # Usage
 ## Importing:
@@ -20,9 +28,9 @@ from seq import Sequence
 ```
 ## Creating sequences:
 ```python
-Sequence.range(0, 10);                                   # 1 to 10 excluding 10
+Sequence.range(0, 10)                                    # 1 to 10 excluding 10
 Sequence.range_closed(0, 10)                             # 1 to 10 including 10
-Sequence.range(0, 10, 2);                                # 1 to 10 stepping 2, excluding 10
+Sequence.range(0, 10, 2)                                 # 1 to 10 stepping 2, excluding 10
 Sequence.iterate(1, lambda k: k * 2)                     # 1, 2, 4, 8.... this sequence is infinite
 Sequence.iterate(1, lambda k: k * 2, lambda k: k < 50)   # Same as the last one but taking values less than 50 (same as doing a takeWhile)
 Sequence.generate(input)                                 # Generate strings with reading from console
@@ -60,7 +68,7 @@ Sequence.of([ 1, 2, 3 ])                                 # Create sequence from 
 - Examples:
 
 ```python
-Sequence.range(0, 100);                \  # Need to create a new sequence with every new pipeline
+Sequence.range(0, 100)                 \  # Need to create a new sequence with every new pipeline
         .filter(lambda k: k % 2 == 0)  \  # Keep only even values in the sequence
         .map(lambda k: k * 2)          \  # Multiply them by 2
         .skip(2)                       \  # Skip the first 2 elements

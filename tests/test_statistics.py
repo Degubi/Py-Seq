@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 from seq import NumberStatistics
 
 class StatisticsTest(TestCase):
@@ -49,4 +49,5 @@ class StatisticsTest(TestCase):
     def test_distinct_with_numbers(self):
         self.assertTupleEqual(sources.distinctNumbers().statistics(), NumberStatistics(17, 4, 0, 10, 4.25))
 
-main()
+if __name__ == '__main__':
+    main()

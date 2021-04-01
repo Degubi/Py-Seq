@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 class CountTest(TestCase):
 
@@ -54,4 +54,5 @@ class CountTest(TestCase):
     def test_distinct_with_numbers(self):
         self.assertEqual(sources.descendingNumbers().count(), 5)
 
-main()
+if __name__ == '__main__':
+    main()

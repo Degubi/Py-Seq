@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 def forEachOpHelper(sequence):
     result = []
@@ -62,4 +62,5 @@ class ForEachTest(TestCase):
     def test_sort_with_numbers(self):
         self.assertListEqual(forEachOpHelper(sources.descendingNumbers()), [ 4, 3, 2, 1, 0 ])
 
-main()
+if __name__ == '__main__':
+    main()

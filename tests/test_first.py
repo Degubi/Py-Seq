@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 class FirstTest(TestCase):
 
@@ -54,4 +54,5 @@ class FirstTest(TestCase):
     def test_sort_with_numbers(self):
         self.assertEqual(sources.descendingNumbers().first(), 4)
 
-main()
+if __name__ == '__main__':
+    main()

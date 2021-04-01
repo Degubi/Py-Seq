@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 class ToListChunkedTest(TestCase):
 
@@ -54,4 +54,5 @@ class ToListChunkedTest(TestCase):
     def test_sort_with_numbers(self):
         self.assertListEqual(sources.descendingNumbers().chunk(3).to_list(), [[ 4, 3, 2 ], [ 1, 0 ]])
 
-main()
+if __name__ == '__main__':
+    main()

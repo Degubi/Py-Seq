@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 class ToDictionaryTest(TestCase):
 
@@ -51,4 +51,5 @@ class ToDictionaryTest(TestCase):
     def test_distinct_with_objects(self):
         self.assertDictEqual(sources.distinctObjects().to_dictionary(lambda k: k, lambda k: len(k)), { 'asd': 3, 'a': 1, 'ba': 2 })
 
-main()
+if __name__ == '__main__':
+    main()

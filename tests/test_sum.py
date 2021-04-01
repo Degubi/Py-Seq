@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 class SumTest(TestCase):
 
@@ -48,4 +48,5 @@ class SumTest(TestCase):
     def test_distinct_with_numbers(self):
         self.assertEqual(sources.distinctNumbers().sum(), 17)
 
-main()
+if __name__ == '__main__':
+    main()

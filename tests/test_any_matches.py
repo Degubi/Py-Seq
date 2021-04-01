@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 
 class AnyMatchesTest(TestCase):
 
@@ -54,4 +54,5 @@ class AnyMatchesTest(TestCase):
     def test_sort_with_numbers(self):
         self.assertTrue(sources.descendingNumbers().any_matches(lambda k: k == 3))
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,7 +1,3 @@
-import sys
-
-sys.path.insert(1, '../py-seq')
-
 from seq import Sequence
 
 def range(): return Sequence.range(0, 10)

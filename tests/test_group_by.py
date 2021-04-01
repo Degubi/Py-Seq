@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-import sources
+import tests.sources as sources
 from seq import Grouper, NumberStatistics
 
 class GroupByTest(TestCase):
@@ -63,4 +63,5 @@ class GroupByTest(TestCase):
     def test_statisticizing_with_already_terminated_sequence(self):
         self.assertRaises(Exception, lambda: sources.terminated().group_by(lambda k: k, Grouper.statisticizing(lambda k: k)))
 
-main()
+if __name__ == '__main__':
+    main()
